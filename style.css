@@ -1,0 +1,76 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section with background image */
+.hero-bg {
+  position: relative;
+  background: url('Portfolio Background.png') no-repeat center center/cover;
+  opacity: 0; /* Start with invisible */
+  transition: opacity 2s ease; /* Fade-in effect */
+  width: 100%;
+  height: 100vh;
+}
+
+/* Fade in the background on page load */
+.fade-in-bg {
+  opacity: 1; /* Fully visible after the transition */
+}
+
+/* Text Background in Hero */
+.text-start {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Details Box */
+.details-box {
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Education Section styles */
+.degree {
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.institution {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.duration {
+  color: #999;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Section Visibility */
+.content-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.internship-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 200px;
+  height: auto;
+  padding-top: 40px;
+}
+
+
+.content-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
